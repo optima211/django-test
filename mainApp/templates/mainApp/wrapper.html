@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Заголовок страницы</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+</head>
+<body>
+<div class="jumbotron">
+    <div class="container">
+        <h1>{% include "mainApp/includes/some_html.html" %}</h1>
+        {% block content %}
+        {% endblock %}
+        <p>
+            <a href="/" class="btn btn-primary btn-lg">Главная</a>
+            <a href="/news" class="btn btn-primary btn-lg">Новости &raquo;</a>
+            <a href="/contact" class="btn btn-primary btn-lg">Контакты</a>
+            <a href="/admin123" class="btn btn-primary btn-lg">Админка</a>
+        </p>
+    </div>
+</div>
+<div class="container">
+    <img src="{% static 'mainApp/image/cat.jpg' %}" class="img-thumbnail" alt="Это просто котик:)">
+    <hr>
+    &copy; Все права зпщищены 2019
+</div>
+</body>
+</html>
