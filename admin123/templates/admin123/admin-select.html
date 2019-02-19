@@ -13,7 +13,18 @@
             <tr>
                 <td>{{ post.login }}</td>
                 <td>{{ post.password }}</td>
-                <td>{{ post.right }}</td>
+                <td>{% if post.right == 1 %}
+                    Администратор
+                {% endif %}
+                    {% if post.right == 2 %}
+                        Директор
+                    {% endif %}
+                    {% if post.right == 3 %}
+                        Бухгалтер
+                    {% endif %}
+                    {% if post.right == 4 %}
+                        Пользователь
+                    {% endif %}</td>
                 <td>{{ post.date }}</td>
                 <td>{{ post.info }}</td>
             </tr>
