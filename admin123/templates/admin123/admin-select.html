@@ -13,9 +13,10 @@
             <tr>
                 <td>{{ post.login }}</td>
                 <td>{{ post.password }}</td>
-                <td>{% if post.right == 1 %}
-                    Администратор
-                {% endif %}
+                <td>
+                    {% if post.right == 1 %}
+                        Администратор
+                    {% endif %}
                     {% if post.right == 2 %}
                         Директор
                     {% endif %}
@@ -24,8 +25,9 @@
                     {% endif %}
                     {% if post.right == 4 %}
                         Пользователь
-                    {% endif %}</td>
-                <td>{{ post.date }}</td>
+                    {% endif %}
+                </td>
+                <td>{{ post.date|date:"j F Y, время: H:i:s" }}</td>
                 <td>{{ post.info }}</td>
             </tr>
         {% endfor %}
