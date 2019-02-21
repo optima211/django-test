@@ -7,5 +7,5 @@ from admin123.models import Admins
 class AdminsCreateForm(forms.Form):
     class Meta:
         model = Admins
-        fields = ('login', 'password',)
+        fields = ('login', 'password', 'info', 'right')
         # fields.save()
