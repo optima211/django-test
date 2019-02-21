@@ -1,11 +1,13 @@
 <!--books/templates/books/book-create.html-->
-
+{% extends "admin123/admin-panel.html" %}
+{% block content-adminlist %}
 <form action="." method="POST">
-
+{{ form.as_p }}
 {% csrf_token %}
 
 <table>
 
 </table>
-<button type="submit">SUBMIT</button>
+<button type="submit" class="save btn btn-default">SUBMIT</button>
 </form>
+{% endblock %}

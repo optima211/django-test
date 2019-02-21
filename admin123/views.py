@@ -44,3 +44,7 @@ class AdminsCreateView(CreateView):
             admins.save()
             return HttpResponseRedirect(reverse_lazy('admins:detail', args=[admins.id]))
         return render(request, 'admin123/admin-create.html', {'form': form})
+
+    def post_new(self, request):
+        form = AdminsCreateForm()
+        return render(request, 'admin123/admin-create.html', {'form': form})
