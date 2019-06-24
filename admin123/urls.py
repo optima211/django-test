@@ -15,5 +15,6 @@ urlpatterns = [
     # path('admin123/add/',
     #      views.CreateUsersView.as_view(template_name="admin123/admin-select.html", name='users-add')),
     path('create/', views.AdminsCreateView.as_view(), name='post_new'),
+    path('post/new/', views.post_new, name='post_new'),
     # path('<int:pk>/', views.AdminDetailView.as_view(), name='detail'),
 ]

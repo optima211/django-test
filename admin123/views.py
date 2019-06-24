@@ -33,6 +33,9 @@ class ShowUsersView(ListView):
 #     fields = ['login', 'password', 'right', 'info']
 
 class AdminsCreateView(CreateView):
+    model = Admins
+    fields = ['login', 'password', 'right', 'info']
+
     def get(self, request, *args, **kwargs):
         context = {'form': AdminsCreateForm()}
         return render(request, 'admin123/admin-create.html', context)
